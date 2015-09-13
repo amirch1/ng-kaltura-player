@@ -20,7 +20,7 @@ angular.module('App', ['Kaltura.directives'])
 
 
 ## Examples
- * [Basic player](/examples/basic_player/index.html)
+ * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
  * [Multiple players on the same page](#)
  * [Passing a Flashvar object for plugins configuration](#)
  * [Sending notifications to the player](#)
