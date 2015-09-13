@@ -9,7 +9,10 @@ Player plugins can be configured as well.
 &lt;script src=&quot;ng-kaltura-player.js&quot;&gt;&lt;/script&gt;
 </pre>
 2. Inject the 'Kaltura.directives' namespace to your Angular application
-##Examples
+<pre>
+angular.module('App', ['Kaltura.directives'])
+</pre>
+## Examples
  * Basic player
  * Multiple players on the same page
  * Passing a Flashvar object for plugins configuration
