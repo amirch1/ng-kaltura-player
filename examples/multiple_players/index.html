@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="App">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="ng-kaltura-player.js"></script>
+    <script src="ctrl.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+    <h2>Multiple Kaltura players on the same page</h2>
+    <p>In order to support more than one player on the same page, provide a unique id for each player directive.</p>
+    <kaltura-player id="player1" pid="1645161" uiconfid="30641211" entryid="1_rhr59a0y" width="640px" height="400px"></kaltura-player>
+    <br><br>
+    <kaltura-player id="player2" pid="1645161" uiconfid="30641211" entryid="1_2o4d5ara" width="640px" height="400px"></kaltura-player>
+  </body>
+</html>
