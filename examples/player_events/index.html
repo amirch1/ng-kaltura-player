@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="App">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="ng-kaltura-player.js"></script>
+    <script src="ctrl.js"></script>
+  </head>
+
+  <style>
+      button{
+          width: 180px;
+          height: 24px;
+          font-family: Arial;
+          font-size: 12px;
+      }
+  </style>
+
+  <body ng-controller="ctrl">
+    <h2>Registering and un-registering to player events</h2>
+    <p>You can register and un-register to player events.<br>
+        In order to establish communication, provide a unique "api" attribute and use it to invoke the player's "addEventListener" and "removeEventListener" methods.<br>
+    </p>
+    <p><b>Note:</b> You must wait for the player ready event before registering to its events.<br>
+        The directive dispatches the <b>kalturaPlayerReady</b> event and passes the api identifier as an event parameter.<br>
+        Use this identifier to call the player's  "addEventListener" and "removeEventListener" methods.
+    </p>
+    <p>
+        For a full list of available player events, look at the <a href="http://player.kaltura.com/docs/api#kBind-desc" target="_blank">Kaltura API documentation</a>.
+    </p>
+    <kaltura-player pid="1645161" uiconfid="30641211" entryid="1_rhr59a0y" api="playerAPI" flashvars="{{flashvars}}" width="640px" height="400px"></kaltura-player>
+    <p>
+        <span> progress: </span><span>{{progress}}</span><br><br>
+        <button ng-click="stopTracking()">Remove Tracking Listener</button>
+    </p>
+  </body>
+</html>
