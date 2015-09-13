@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="App">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="ng-kaltura-player.js"></script>
+    <script src="ctrl.js"></script>
+  </head>
+  <body ng-controller="KalturaPlayerCtrl">
+    <span>Kaltura player: </span>
+  <kaltura-player id="p1" api="p1API" pid="1645161" uiconfid="30641211" entryid="1_2o4d5ara" flashvars="{{flashvars}}" width="640px" height="320px"></kaltura-player>
+
+   <p>
+      <button ng-click="sendToPlayer('p1API','doPlay')">play</button>
+      <button ng-click="sendToPlayer('p1API','doPause')">pause</button>
+      <span> progress: </span><span>{{progress}}</span>
+   </p>
+  </body>
+</html>
