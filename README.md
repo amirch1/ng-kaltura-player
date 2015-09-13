@@ -22,6 +22,6 @@ angular.module('App', ['Kaltura.directives'])
 ## Examples
  * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
  * [Multiple players on the same page](http://amirush.com/ng-kaltura-player/multiple_players/index.html)
- * [Passing a Flashvar object for plugins configuration](#)
+ * [Passing a Flashvar object for plugins configuration](http://amirush.com/ng-kaltura-player/pass_flashvar/index.html)
  * [Sending notifications to the player](#)
  * [Registering and un-registering to player events](#)

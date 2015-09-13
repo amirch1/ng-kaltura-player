@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app="App">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="ng-kaltura-player.js"></script>
+    <script src="ctrl.js"></script>
+  </head>
+  <body ng-controller="ctrl">
+    <h2>Passing a Flashvar object for plugins configuration</h2>
+    <p>A Flashvar object can be passed to the player using the "flashvars" attribute.<br>
+    In this example the "title" and "share" plugins are configured by passing the flashvar object using scope binding.</p>
+    <kaltura-player pid="1645161" uiconfid="30641211" entryid="1_rhr59a0y" flashvars="{{flashvars}}" width="640px" height="400px"></kaltura-player>
+  </body>
+</html>
