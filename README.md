@@ -4,17 +4,17 @@ A directive for [AngularJS](http://angularjs.org) for embedding the [Kaltura](ht
 The directive supports basic embedding as well an API for controlling the player using notifications and events registration.<br/>
 Player plugins can be configured as well.
 ## Setup
-1. Download the directive file: ng-kaltura-player.js and add it to your HTML page.
+        1. Download the directive file: ng-kaltura-player.js and add it to your HTML page.
 ```
-&lt;script src=&quot;ng-kaltura-player.js&quot;&gt;&lt;/script&gt;
+<script src="ng-kaltura-player.js"></script>
 ```
-2. Inject the 'Kaltura.directives' namespace to your Angular application
+        2. Inject the 'Kaltura.directives' namespace to your Angular application
 ```
 angular.module('App', ['Kaltura.directives'])
 ```
-3. Use the directive in your HTML markup
+        3. Use the directive in your HTML markup
 ```
-&lt;kaltura-player width=&quot;640px&quot; height=&quot;320px&quot;&gt;&lt;/kaltura-player&gt;
+<kaltura-player width="640px" height="320px"></kaltura-player>
 ```
 4. Explore the example below to learn how to configure the player and use its API
 ## Examples
