@@ -6,13 +6,7 @@ Player plugins can be configured as well.
 ## Setup
 1. Download the directive file: ng-kaltura-player.js and add it to your HTML page.
 <pre>
-<!doctype html>
-<html ng-app="App">
-  <head>
-    <script src="angular.min.js"></script>
-    <script src="ng-kaltura-player.js"></script>
-  </head>
-</html>
+&lt;script src=&quot;ng-kaltura-player.js&quot;&gt;&lt;/script&gt;
 </pre>
 ##Examples
  * Basic player
