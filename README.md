@@ -1,7 +1,7 @@
 # ng-kaltura-player
 ## Overview
-A directive for [AngularJS](http://angularjs.org) for embedding the [Kaltura](http://www.kaltura.com) video player.
-The directive supports basic embedding as well an API for controlling the player using notifications and events registration.
+A directive for [AngularJS](http://angularjs.org) for embedding the [Kaltura](http://www.kaltura.com) video player.<br/>
+The directive supports basic embedding as well an API for controlling the player using notifications and events registration.<br/>
 Player plugins can be configured as well.
 ## Setup
 ##Examples
