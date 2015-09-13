@@ -16,7 +16,7 @@ angular.module('App', ['Kaltura.directives'])
 <pre>
 &lt;kaltura-player width=&quot;640px&quot; height=&quot;320px&quot;&gt;&lt;/kaltura-player&gt;
 </pre>
-4. Explore the example below to learn how to configure the player and use its API
+4. Explore the examples below to learn how to configure the player and use its API
 
 
 ## Examples
