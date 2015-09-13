@@ -12,6 +12,10 @@ Player plugins can be configured as well.
 <pre>
 angular.module('App', ['Kaltura.directives'])
 </pre>
+3. Use the directive in your HTML markup
+<pre>
+&lt;kaltura-player width=&quot;640px&quot; height=&quot;320px&quot;&gt;&lt;/kaltura-player&gt;
+</pre>
 ## Examples
  * Basic player
  * Multiple players on the same page
