@@ -5,9 +5,9 @@ The directive supports basic embedding as well an API for controlling the player
 Player plugins can be configured as well.
 ## Setup
 1. Download the directive file: ng-kaltura-player.js and add it to your HTML page.
-<pre>
+'''
 &lt;script src=&quot;ng-kaltura-player.js&quot;&gt;&lt;/script&gt;
-</pre>
+'''
 2. Inject the 'Kaltura.directives' namespace to your Angular application
 <pre>
 angular.module('App', ['Kaltura.directives'])
@@ -16,6 +16,7 @@ angular.module('App', ['Kaltura.directives'])
 <pre>
 &lt;kaltura-player width=&quot;640px&quot; height=&quot;320px&quot;&gt;&lt;/kaltura-player&gt;
 </pre>
+4. Explore the example below to learn how to configure the player and use its API
 ## Examples
  * Basic player
  * Multiple players on the same page
