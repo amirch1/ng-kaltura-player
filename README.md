@@ -20,9 +20,12 @@ angular.module('App', ['Kaltura.directives'])
 
 ## Usage
 
-### Attributes
+#### Attributes
 * **width**: The player width. You can specify px for pixels or % for percentage
 * **height**: The player height. You can specify px for pixels or % for percentage
+* **pid**: Your Kaltura publisher ID.
+* **uiconfid**: Your Kaltura player ID.
+* **entryid**: The entry ID of the video to be play.
 
 ## Examples
  * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
