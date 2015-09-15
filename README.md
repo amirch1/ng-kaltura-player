@@ -18,6 +18,10 @@ angular.module('App', ['Kaltura.directives'])
 </pre>
 4. Explore the examples below to learn how to configure the player and use its API
 
+## Usage
+
+### Attributes
+* *width*: The player width. Yu can specify px for pixels or % for percentage
 
 ## Examples
  * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
