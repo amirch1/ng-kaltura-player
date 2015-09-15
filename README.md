@@ -25,7 +25,18 @@ angular.module('App', ['Kaltura.directives'])
 * **height**: The player height. You can specify px for pixels or % for percentage
 * **pid**: Your Kaltura publisher ID.
 * **uiconfid**: Your Kaltura player ID.
-* **entryid**: The entry ID of the video to be play.
+* **entryid**: The entry ID of the video to play.
+* **flahvars**: A Kaltura player flashvars object listing player configuration and plugins.
+
+#### Events
+* **kalturaPlayerReady**: Dispatched by the directive to the $rootScope when the Kaltura player is ready to play:
+<pre>
+	$scope.$on("kalturaPlayerReady", function(event, kdp, id){
+		// event: the event object
+		// kdp: A reference to the Kaltura player that can be used with the Kaltura player API.
+		// id: the player directive id attribute if specified.
+	});
+</pre>
 
 ## Examples
  * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
