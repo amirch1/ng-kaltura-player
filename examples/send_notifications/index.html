@@ -18,14 +18,15 @@
   <body ng-controller="ctrl">
     <h2>Sending notifications to the player</h2>
     <p>You can send notifications to the player in order to control playback.<br>
-        In order to establish communication, provide a unique "api" attribute and use it to invoke the player's "sendNotification" method.<br>
+        Register the the "kalturaPlayerReady" event to get a reference to the player.<br>
+        Use the player "sendNotification" API to control it.<br>
         For a full list of available notifications, look at the <a href="http://player.kaltura.com/docs/api#sendNotification-desc" target="_blank">Kaltura API documentation</a>.
     </p>
-    <kaltura-player pid="1645161" uiconfid="30641211" entryid="1_rhr59a0y" api="playerAPI" width="640px" height="400px"></kaltura-player>
+    <kaltura-player pid="1645161" uiconfid="30641211" entryid="1_rhr59a0y" width="640px" height="400px"></kaltura-player>
 
     <p>
-        <button ng-click="sendToPlayer('playerAPI','doPlay')">play</button>
-        <button ng-click="sendToPlayer('playerAPI','doPause')">pause</button>
+        <button ng-click="sendToPlayer('doPlay')" ng-disabled="!kdp">play</button>
+        <button ng-click="sendToPlayer('doPause')" ng-disabled="!kdp">pause</button>
     </p>
 
   </body>

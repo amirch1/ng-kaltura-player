@@ -5,9 +5,7 @@ kalturaDirectivesModule.directive('kalturaPlayer', ['$rootScope', function($root
 
 		restrict: 'E',
 		template: '<div id="kaltura_player_{{id}}" style="width:{{width}}; height:{{height}}; background-color: black"></div>',
-		scope: {
-			api: '='
-		},
+		scope: {},
 
 		compile: function(element, attributes) {
 
@@ -29,21 +27,7 @@ kalturaDirectivesModule.directive('kalturaPlayer', ['$rootScope', function($root
 				if (attributes.id){
 					$scope.id = attributes.id;
 				}
-				if (attributes.api){
-					$scope.api = {
-						sendNotification: function(val) {
-							$scope.kdp.sendNotification(val);
-						},
-						addEventListener: function(eventName, callback) {
-							$scope.kdp.kBind(eventName, function(data){
-								callback(data);
-							});
-						},
-						removeEventListener: function(eventName) {
-							$scope.kdp.kUnbind(eventName);
-						}
-					};
-				}
+
 
 				if (!$scope.kdp){
 					var intervalID = setInterval(function(){
@@ -62,7 +46,7 @@ kalturaDirectivesModule.directive('kalturaPlayer', ['$rootScope', function($root
 								"entry_id": attributes.entryid,
 								"readyCallback": function(playerID){
 									$scope.kdp = document.getElementById(playerID);
-									$rootScope.$broadcast('kalturaPlayerReady', attributes.api);
+									$rootScope.$broadcast('kalturaPlayerReady', $scope.kdp, attributes.id);
 								}
 							});
 						}
