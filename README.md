@@ -21,7 +21,8 @@ angular.module('App', ['Kaltura.directives'])
 ## Usage
 
 ### Attributes
-* *width*: The player width. Yu can specify px for pixels or % for percentage
+* **width**: The player width. You can specify px for pixels or % for percentage
+* **height**: The player height. You can specify px for pixels or % for percentage
 
 ## Examples
  * [Basic player](http://amirush.com/ng-kaltura-player/basic_player/index.html)
