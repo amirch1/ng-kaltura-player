@@ -19,7 +19,7 @@
 
         function compile($scope, element, attributes) {
             return {
-                pre: function appendScript($scope, element, attributes) {
+                pre: function ($scope, element, attributes) {
                     if (document.getElementById('kalturaLib') === null) {
                         var s = document.createElement('script');
                         s.src = 'http://cdnapi.kaltura.com/p/' + attributes.pid + '/sp/' + attributes.pid +
@@ -29,7 +29,7 @@
                         document.head.appendChild(s);
                     }
                 },
-                post: function postLink($scope, element, attributes) {
+                post: function ($scope, element, attributes) {
                     if (attributes.width) {
                         $scope.width = attributes.width;
                     }
