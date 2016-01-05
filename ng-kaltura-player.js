@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('Kaltura.directives')
+        .module('Kaltura.directives', [])
         .directive('kalturaPlayer', kalturaPlayer);
 
-    kalturaPlayer.$inject = ['$rootScope', 'kalturaPlayerConfig'];
+    kalturaPlayer.$inject = ['$rootScope'];
 
     // @ngInject
-    function kalturaPlayer($rootScope, kalturaPlayerConfig) {
+    function kalturaPlayer($rootScope) {
         return {
             restrict: 'E',
             template: '<div id="kaltura_player_{{id}}" style="width:{{width}}; height:{{height}};' +
@@ -17,11 +17,18 @@
             compile: compile
         };
 
-        function compile() {
-            var options = kalturaPlayerConfig.getOptions();
-
+        function compile($scope, element, attributes) {
             return {
-                pre: appendScript(options),
+                pre: function appendScript($scope, element, attributes) {
+                    if (document.getElementById('kalturaLib') === null) {
+                        var s = document.createElement('script');
+                        s.src = 'http://cdnapi.kaltura.com/p/' + attributes.pid + '/sp/' + attributes.pid +
+                            '/embedIframeJs/uiconf_id/' + attributes.uiconfid + '/partner_id/' + attributes.pid;
+                        s.id = 'kalturaLib';
+                        s.async = false;
+                        document.head.appendChild(s);
+                    }
+                },
                 post: function postLink($scope, element, attributes) {
                     if (attributes.width) {
                         $scope.width = attributes.width;
@@ -42,8 +49,8 @@
 
                                 window.kWidget.embed({
                                     'targetId': target,
-                                    'wid': '_' + options.pid,
-                                    'uiconf_id': options.uiconfid,
+                                    'wid': '_' + attributes.pid,
+                                    'uiconf_id': attributes.uiconfid,
                                     'flashvars': flashvars,
                                     'cache_st': Math.random(),
                                     'entry_id': attributes.entryid,
@@ -57,17 +64,6 @@
                     }
                 }
             };
-        }
-
-        function appendScript(options) {
-            if (document.getElementById('kalturaLib') === null) {
-                var s = document.createElement('script');
-                s.src = 'http://cdnapi.kaltura.com/p/' + options.pid + '/sp/' + options.pid +
-                    '/embedIframeJs/uiconf_id/' + options.uiconfid + '/partner_id/' + options.pid;
-                s.id = 'kalturaLib';
-                s.async = false;
-                document.head.appendChild(s);
-            }
         }
     }
 })();
